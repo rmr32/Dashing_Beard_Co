@@ -1,0 +1,201 @@
+/* ************* Oil Style ************** */
+/* ************************************** */
+
+.oils {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+    overflow: hidden;
+
+    .oil {
+
+        display: flex;
+        @include backImage($image: '../../images/4_SilentFilm/GIF/Silent_Film_Transparent_Blank.gif', $opStart: .2, $opEnd: .5);
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        align-content: center;
+        align-items: center;  
+        overflow: hidden;
+
+        .info {
+
+            padding: 0% 0% 0% 0%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            order: 2;
+            width: 98%;
+            font-size: 3.4vw;
+            @include backImage($image: '../../images/3_TitleCard/Title_Card_GIF/Silent_Film_Title_Screen_Transparent_Mobile_White.gif');
+           // background-image: url("../../images/3_TitleCard/Title_Card_GIF/Silent_Film_Title_Screen_Transparent_Mobile_White.gif");
+            background-size: contain;
+            height: 75%;
+
+            h1 {
+                font-family: $font-name;
+            } // H1
+
+            .icons {
+                .icon{
+                    padding: 1.5vh 0px;
+                    height: 15vh;
+                }  // Icon
+            } // Icons
+
+            p {
+                width: 90%;
+            } // P
+
+        } // Info
+
+        .oilPic{
+
+            order: 1;
+            width: 100vw;
+
+            .bottle {
+                width: 25vw;
+                padding-top: 4vh;            
+            } // Bottle
+
+        } // Oil Pic
+
+        @include screen('desktop') {
+            
+            flex-direction: row;
+
+            .info {
+
+                padding: 1%, 8%, 0%, 8%;
+                order: 1;
+                font-size: 1.2rem;
+                width: 60%;
+                max-width: 1000px;
+                @include backImage($image: '../../images/3_TitleCard/Title_Card_GIF/Silent_Film_Title_Screen_Transparent_Tablet_White.gif', $height: 70%);
+                background-size: contain;
+
+                h1 {
+                    font-size: 2.3rem;
+                    padding-top: 2vh;
+                } // Desktop H1
+
+                p {
+                    max-width: 500px;
+                } // Desktop p
+
+            } // Desktop Info
+
+            .oilPic {
+                width: 40vw;
+                margin-left: -5vw;
+                order: 2; 
+                .bottle {
+                    width: 25vw;
+                    max-width: 400px;
+                    padding-bottom: 2vh;
+                } // Desktop Bottle
+
+            } // Desktop oilPic
+
+        } // Desktop
+
+        @include screen('tablet') {
+            
+            flex-direction: row;
+
+            .info {
+
+                padding: 0px, 0px, 0px, 4vw;
+                order: 1;
+                font-size: 1.2rem;
+
+                h1 {
+                    font-size: 2rem;
+                    padding-top: 2vh;
+                } // Tablet H1
+
+                p {
+                    max-width: 475px;
+                } // Tablet p
+
+            } // Tablet Info
+
+            .oilPic {
+                width: 35vw;
+                margin-left: -5vw;
+                order: 2; 
+                .bottle {
+                    width: 20vw;
+                } //Mobile Bottle
+
+            } // Tablet oilPic
+
+        } // Tablet
+
+        @include screen('mobile') {
+            
+            .info {
+
+                font-size: 1rem;
+
+                h1 {
+                    font-size: 1.5rem;
+                    padding-top: 2vh;
+                } // Mobile H1
+
+                p {
+                    max-width: 350px;
+                } // Mobile p
+
+            } // Mobile Info
+
+            .oilPic{
+
+                .bottle {
+                    width: 30vw;       
+                } // Mobile Bottle
+    
+            } // Mobile Oil Pic
+
+        } // Mobile
+
+        @include screen('narrowmobile') {
+            
+            .info {
+
+                font-size: 3.5vw;
+
+                h1 {
+                    padding-top: 2vh;
+                } // NarrowMobile H1
+
+                p {
+                    max-width: 350px;
+                } // NarrowMobile p
+
+            } // NarrowMobile Info
+
+            .oilPic{
+
+                .bottle {
+                    width: 35vw;       
+                } // NarrowMobile Bottle
+    
+            } // NarrowMobile Oil Pic
+           
+
+        } // NarrowMobile
+
+    } // Oil
+
+} // Oils

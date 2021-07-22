@@ -1,0 +1,473 @@
+/* *************** Oil Section *************** */
+/* ******************************************* */
+
+.oil {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;  
+
+    /*Background Image */
+    .frame::before {
+        content: " ";
+        display: block;
+        position:absolute;
+        @include backImage($image: '../../images/10_Smoke/DBC_Bath_Mobile.png', $bgSize: contain);
+        filter: grayscale(80%) drop-shadow(var(--box));
+        -webkit-filter: grayscale(80%) drop-shadow(var(--box));
+        opacity: .55;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    } // Frame::before (Background Image)
+
+    /*Title Card */
+    .frame {
+        width: 95%;
+        max-width: 500px;
+        min-height: 600px;
+        padding: 0px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;  
+        text-align: center;
+        --box: 0px 0px 20px rgba(252, 252, 252, .7);
+    } // Frame
+
+    /*For Tilt Effect */
+    .oilTilt {
+        transform-style: preserve-3d;
+    
+        /*Oil Name */
+        .name {
+            // transform: translateZ(30px) translateY(-50%) translateX(-50%);
+            position: relative;
+            font-family: $font-name;
+            font-size: 1.4em;
+            top: calc(-5vh - 6vw);
+
+            /*To have Oil Names change on Oil hover */
+            &::before {
+                content: "The Oils";
+            } //Oil Name::Before
+        } //Oil Name
+
+        /*Gentleman Oil */
+        #gentleman {
+            transform: translateZ(20px) translateY(-50%) translateX(-50%);
+            @include backImage($image: '../../images/2_Oil/PNG/The_Gentleman.png', $bgSize: contain);
+            height: 60px;
+            width: 50px;
+            position: absolute;
+            cursor: pointer;
+            top: calc(46% - 23.5vw);
+            left: 8.5%;
+            opacity: .6;
+            transition-duration: $duration;
+
+            &:hover {
+                opacity:1;
+
+                ~ .name::before {
+                    content: "The Gentleman";
+                    animation: fade 1s;
+                } //name::before
+            } //hover
+        } // Gentleman
+
+        /*Playboy Oil */
+        .playboy {
+            transform: translateZ(20px) translateY(-50%) translateX(-50%);
+            @include backImage($image: '../../images/2_Oil/PNG/The_Playboy.png', $bgSize: contain);
+            height: 60px;
+            width: 50px;
+            position: absolute;
+            cursor: pointer;
+            top: calc(47% - 7vw);
+            left: 8%;
+            opacity: .6;
+            transition-duration: $duration;
+
+            &:hover {
+                opacity:1;
+
+                ~ .name::before {
+                    content: "The Playboy";
+                    animation: fade 1s;
+                } //name::before
+            } //hover
+        } // Playboy
+
+        /*Aristocrat Oil */
+        .aristocrat {
+            transform: translateZ(50px) translateY(-50%) translateX(-50%);
+            @include backImage($image: '../../images/2_Oil/PNG/The_Aristocrat.png', $bgSize: contain);
+            height: 70px;
+            width: 60px;
+            position: absolute;
+            cursor: pointer;
+            top: calc(46% + 20vw);
+            left: 9%;
+            opacity: .6;
+            transition-duration: $duration;
+
+            &:hover {
+                opacity:1;
+
+                ~ .name::before {
+                    content: "The Aristocrat";
+                    animation: fade 1s;
+                } //name::before
+            } //hover
+        } // Aristocrat
+
+        /*Logger Oil */
+        .logger {
+            transform: translateZ(40px) translateY(-50%) translateX(-50%);
+            @include backImage($image: '../../images/2_Oil/PNG/The_Logger.png', $bgSize: contain);
+            height: 65px;
+            width: 55px;
+            position: absolute;
+            cursor: pointer;
+            top: calc(44% + 18vw);
+            left: 25%;
+            opacity: .6;
+            transition-duration: $duration;
+
+            &:hover {
+                opacity:1;
+
+                ~ .name::before {
+                    content: "The Logger";
+                    animation: fade 1s;
+                } //name::before
+            } //hover
+        } // Logger
+
+        /*Entertainer Oil */
+        .entertainer {
+            transform: translateZ(40px) translateY(-50%) translateX(-50%);
+            @include backImage($image: '../../images/2_Oil/PNG/The_Entertainer.png', $bgSize: contain);
+            height: 65px;
+            width: 55px;
+            position: absolute;
+            cursor: pointer;
+            top: calc(45% + 19.5vw);
+            left: 80%;
+            opacity: .6;
+            transition-duration: $duration;
+
+            &:hover {
+                opacity:1;
+
+                ~ .name::before {
+                    content: "The Entertainer";
+                    animation: fade 1s;
+                } //name::before
+            } //hover
+        } // Entertainer
+
+        /*Outlaw Oil */
+        .outlaw {
+            transform: translateZ(20px) translateY(-50%) translateX(-50%);
+            @include backImage($image: '../../images/2_Oil/PNG/The_Outlaw.png', $bgSize: contain);
+            height: 60px;
+            width: 50px;
+            position: absolute;
+            cursor: pointer;
+            top: calc(45.5% - 4vw);
+            left: 92%;
+            opacity: .6;
+            transition-duration: $duration;
+
+            &:hover {
+                opacity:1;
+
+                ~ .name::before {
+                    content: "The Outlaw";
+                    animation: fade 1s;
+                } //name::before
+            } //hover
+        } // Outlaw
+        
+        /*Bohemian Oil */
+        .bohemian {
+            transform: translateZ(20px) translateY(-50%) translateX(-50%);
+            @include backImage($image: '../../images/2_Oil/PNG/The_Bohemian.png', $bgSize: contain);
+            height: 60px;
+            width: 50px;
+            position: absolute;
+            cursor: pointer;
+            top: calc(46% - 23.5vw);
+            left: 92%;
+            opacity: .6;
+            transition-duration: $duration;
+
+            &:hover {
+                opacity:1;
+
+                ~ .name::before {
+                    content: "The Bohemian";
+                    animation: fade 1s;
+                } //name::before
+            } //hover
+        } // Bohemian
+
+    } //Oil Tilt
+
+    @include break(540px) {
+        
+        /*For Tilt Effect */
+        .oilTilt {
+
+            /*Oil Name */
+            .name {
+                font-size: 2em;
+                top: -410px;
+                left: -7px;
+            } //Oil Name
+
+            /*Gentleman Oil */
+            #gentleman {
+                height: 80px;
+                width: 70px;
+                position: relative;
+                left: -11.2rem;
+                top: 9.3rem;
+            } // Gentleman
+
+            /*Playboy Oil */
+            .playboy {
+                height: 80px;
+                width: 70px;
+                position: relative;
+                left: -11rem;
+                top: 10.1rem;
+            } // Playboy
+
+            /*Aristocrat Oil */
+            .aristocrat {
+                height: 85px;
+                width: 75px;
+                position: relative;
+                left: -10.4rem;
+                top: 13.5rem;
+            } // Aristocrat
+
+            /*Logger Oil */
+            .logger {
+                height: 80px;
+                width: 70px;
+                position: relative;
+                left: -5.5rem;
+                top: 6.5rem;
+            } // Logger
+
+            /*Entertainer Oil */
+            .entertainer {
+                height: 85px;
+                width: 75px;
+                position: relative;
+                left: 10.5rem;
+                top: 2.5rem;
+            } // Entertainer
+
+            /*Outlaw Oil */
+            .outlaw {
+                height: 80px;
+                width: 70px;
+                position: relative;
+                left: 15.7rem;
+                top: -10.2rem;
+            } // Outlaw
+            
+            /*Bohemian Oil */
+            .bohemian {
+                height: 80px;
+                width: 70px;
+                position: relative;
+                left: 15.5rem;
+                top: -21.3rem;
+            } // Bohemian
+        } // oilTilt
+    
+    } // Break 540
+
+    @include break(880px) {
+
+        .frame {
+            max-width: 750px;
+            width: 85vw;
+        } // Frame
+
+        .frame::before {
+            @include backImage($image: '../../images/10_Smoke/DBC_Bath_Tablet.png', $bgSize: contain);
+        } // Frame::before (Background Image)
+        
+        /*For Tilt Effect */
+        .oilTilt {
+
+            /*Oil Name */
+            .name {
+                font-size: 2.4em;
+                top: -510px;
+                left: -8px;
+            } //Oil Name
+
+            /*Gentleman Oil */
+            #gentleman {
+                height: 100px;
+                width: 90px;
+                position: relative;
+                left: -13.5rem;
+                top: 12.9rem;
+            } // Gentleman
+
+            /*Playboy Oil */
+            .playboy {
+                height: 105px;
+                width: 95px;
+                position: relative;
+                left: -16rem;
+                top: 22.2rem;
+            } // Playboy
+
+            /*Aristocrat Oil */
+            .aristocrat {
+                height: 110px;
+                width: 100px;
+                position: relative;
+                left: -10.8rem;
+                top: 17.2rem;
+            } // Aristocrat
+
+            /*Logger Oil */
+            .logger {
+                height: 105px;
+                width: 95px;
+                position: relative;
+                left: -5.5rem;
+                top: 8.4rem;
+            } // Logger
+
+            /*Entertainer Oil */
+            .entertainer {
+                height: 110px;
+                width: 100px;
+                position: relative;
+                left: 12.5rem;
+                top: 3rem;
+            } // Entertainer
+
+            /*Outlaw Oil */
+            .outlaw {
+                height: 105px;
+                width: 95px;
+                position: relative;
+                left: 20rem;
+                top: -5rem;
+            } // Outlaw
+            
+            /*Bohemian Oil */
+            .bohemian {
+                height: 100px;
+                width: 90px;
+                position: relative;
+                left: 21rem;
+                top: -26.5rem;
+            } // Bohemian
+        } // oilTilt
+    
+    } // Break 880
+
+    @include break(1410px) {
+
+        .frame {
+            max-width: 1200px;
+        } // Frame
+
+        .frame::before {
+            @include backImage($image: '../../images/10_Smoke/DBC_Bath_Desktop.png', $bgSize: contain);
+        } // Frame::before (Background Image)
+        
+        /*For Tilt Effect */
+        .oilTilt {
+
+            /*Oil Name */
+            .name {
+                top: -582px;
+            } //Oil Name
+
+            /*Gentleman Oil */
+            #gentleman {
+                height: 120px;
+                width: 110px;
+                position: relative;
+                left: -13rem;
+                top: 16.9rem;
+            } // Gentleman
+
+            /*Playboy Oil */
+            .playboy {
+                height: 130px;
+                width: 120px;
+                position: relative;
+                left: -20rem;
+                top: 26rem;
+            } // Playboy
+
+            /*Aristocrat Oil */
+            .aristocrat {
+                height: 130px;
+                width: 120px;
+                position: relative;
+                left: -14rem;
+                top: 19.5rem;
+            } // Aristocrat
+
+            /*Logger Oil */
+            .logger {
+                height: 125px;
+                width: 115px;
+                position: relative;
+                left: -6.5rem;
+                top: 9rem;
+            } // Logger
+
+            /*Entertainer Oil */
+            .entertainer {
+                height: 130px;
+                width: 120px;
+                position: relative;
+                left: 15rem;
+                top: 3rem;
+            } // Entertainer
+
+            /*Outlaw Oil */
+            .outlaw {
+                height: 125px;
+                width: 115px;
+                position: relative;
+                left: 25rem;
+                top: -6.5rem;
+            } // Outlaw
+            
+            /*Bohemian Oil */
+            .bohemian {
+                height: 120px;
+                width: 110px;
+                position: relative;
+                left: 22rem;
+                top: -30.5rem;
+            } // Bohemian
+        } // oilTilt
+    
+    } // Break 1200
+
+} // Oil

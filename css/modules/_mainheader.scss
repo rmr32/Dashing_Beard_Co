@@ -1,0 +1,36 @@
+/* ************* Background Content ************* */
+/* ********************************************** */
+
+/* Logo Screen ************* */
+
+.mainheader {
+    position: fixed;
+    height:100vh;
+    width: 100vw;
+    z-index: -2;
+    @include backImage($image: '../../images/4_SilentFilm/GIF/Silent_Film_Blank.gif');
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;  
+    text-align: center;
+} // header
+
+.logo {
+    position: fixed;
+    height:100vh;
+    width: 90vw;
+    opacity: 1;
+    z-index: -1;
+    @include backImage($image: '../../images/1_Logo/Logo_GIF/Dashing_Logo_XLarge.gif');
+    max-width: 700px;    
+} // logo
+
+
+.spacer {
+    opacity: 0;
+    z-index: -3;
+} //spacer

@@ -1,0 +1,95 @@
+/* ************* Global Variables ************* */
+/* ****************************************** */
+
+// @import "bootstrap/functions";
+// @import "bootstrap/variables";
+
+// /* Fonts ************* */
+// @import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+
+// /* Font Styles ************* */
+// $font-header: 'Baskerville', serif;
+// $font-body: 'Baskerville', serif;
+// $font-name: 'Baskerville', serif;
+
+/*Enables Bootstrap responsive font sizes */
+// $enable-responsive-font-sizes: true;
+
+/*Enables and customizes shadows in Bootstrap */
+// $btn-box-shadow: inset 0 1px 0 rgba(#fff, 0.15), 0 5px 10px rgba(#000, 0.75) !default;
+// $enable-shadow: true;
+
+/* Change Bootstraps default colors */
+// $primary: #;
+// $secondary: #;
+
+/* Add Theme-Colors to Bootstrap ************* */
+// $theme-colors: (
+//     'backgroundblack': rgba(0,0,0,.8),
+//     'gentlemanblue': #435869,
+//     'outlawbrown': #9b825c,
+//     'aristocratpurple': #68517a,
+//     'loggerred': #a34037,
+//     'entertainerorange': #d49840,
+//     'playboysilver': #717375,
+//     'bohemiangreen': #5b7d6a
+// );
+
+    // $backgroundblack: rgba(0,0,0,.8);
+    // $gentlemanblue: #435869;
+    // $gentlemanblue: #5e707d;
+    // $outlawbrown: #9b825c; //CMYK: 37,43,69,10
+    // $outlawbrown: #aa9472; 
+    // $aristocratpurple: #68517a;
+    // $aristocratpurple: #7c6888;
+    // $loggerred: #a34037;
+    // $loggerred: #b15c53;
+    // $entertainerorange: #d49840;
+    // $entertainerorange: #dba457;
+    // $playboysilver: #717375;
+    // $playboysilver: #8a8a8c;
+    // $bohemiangreen: #5b7d6a;
+    // $bohemiangreen: #759181;
+
+/* Add spacer heights to Bootstrap ************* */
+// $spacers: (
+//     6: ( $spacer*5)
+// );
+
+/* Add sizes to Bootstrap ************* */
+// $sizes: (
+//     33: 33%
+// );
+
+/* Disable dropdown caret in Bootstrap ************* */
+// $enable-caret: false;
+
+/* Add breakpoints and container max-widths in Bootstrap ************* */
+// $grid-breakpoints: (
+//     small: 450px,
+//     medium: 800px,
+//     large: 1300px
+// );
+
+// $container-max-widths: (
+//     small: 430px,
+//     medium: 780px,
+//     large: 1270px
+// );
+
+
+
+/* GSAP ANIMATION
+//Toggles animation with different speed on reverse
+// var tl = TweenLite.to($('#box'), 30, {x:1000});
+
+// $('#button').click(function() {
+    
+//   var progress = tl.progress();
+//   var reversed = tl.reversed();
+//   var duration = reversed ? 30 : 2;
+  
+//   tl.reversed(!reversed)
+//     .duration(duration)
+//     .progress(progress);
+// });

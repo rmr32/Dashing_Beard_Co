@@ -1,0 +1,435 @@
+/* ************* Slider Section ************* */
+/* ****************************************** */
+
+// Slider Nav
+.slider {
+    position: relative;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    opacity: 0.9;
+
+    /*Slider Nav Bar */
+    .slider__nav-bar {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;  
+        width: 300px;
+        height: 32px;
+        bottom: 5.5%;
+        left: 50%;
+        transform: translateX( -50% );
+        // border-radius: 90px;
+        // border: 2px solid $fontColor;
+        // background: rgba($fontColor, .05);
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+
+        .nav-control {
+            transition: $durationFast;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            z-index: 3;
+            display: flex;
+
+            &:hover {
+                transform: scale(1.5);
+            } // Nav Control Hover
+
+            &_active {
+                opacity: 1;
+                transform: scale(1.5);
+            } // Nav Control Active
+
+        } // Nav Control
+
+        @each $oilName,$i in $oilNames {
+            $oilbg: nth($i, 1);
+            .#{$oilName}Nav {
+                    background-color: $oilbg;
+                    border-radius: 25px;
+                &:hover {
+                    @include tooltip($oil: $oilName, $bgcolor: $oilbg);
+                } // Oilnav Hover
+            } // Oil Nav array
+        } // Oil Nav colors and Tooltip
+
+    } // Nav Bar
+
+    /*Slider Arrows*/
+    .slider__controls {
+
+        .slider__arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY( -50% );
+            cursor: pointer;
+            z-index: 100;
+            opacity: 1;
+            transition-duration: $durationFast;
+          
+            &:hover {
+                filter: drop-shadow(0px 0px 20px rgba($fontColor, .7));
+            } // Slider Arrow Hover
+        } // Slider Arrow
+
+        .slider__arrow_prev {
+            left: 4vw;
+            @include backImage($image: '../../images/9_icons/PNG/arrow__left-white.png', $bgSize: contain);
+            width: 10vw;
+            max-width: 64px;
+            height: 10vw;
+            max-height: 64px;
+        } // Left Slider Arrow
+
+        .slider__arrow_next {
+            right: 4vw;
+            @include backImage($image: '../../images/9_icons/PNG/arrow__right-white.png', $bgSize: contain);
+            width: 10vw;
+            max-width: 64px;
+            height: 10vw;
+            max-height: 64px;
+        } // Right Slider Arrow
+    } // Slider Arrows
+
+    /*Slider Oil Sections*/
+    .slider-list {
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    } // Slider List
+      
+} // Slider
+
+// Slider Content
+.slider-list__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+    width: 100vw;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $fontColor;
+    will-change: transform;
+    z-index: 1;
+    opacity: 0;
+
+    &_active{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+        z-index: 2;
+    } // Active Slider Item
+    
+    .back__element {
+        position: absolute;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 1;
+
+        span {
+            position: relative;
+            display: block;
+            top: 50%; left: 50%;
+            filter: drop-shadow(0rem .7rem 1.3rem $primaryColor);
+            transform: translate( -50%, -50% );
+            width: 100vw;
+            max-width: 640px;
+            height: 100vh;
+        } // Span for Back Images
+
+        @each $oilName,$i in $oilNames {
+            .#{$oilName}Back {
+                @include backImage($image: '../../images/8_Ingrediants/#{$oilName}_ing_back.png', $bgSize: contain);
+            } // Oil Back Image Background
+        } // Each for Oil Background
+
+    } // Slider Back Elements
+
+    .main__element {
+        position: relative;
+        display: block;
+        width: 40vw;
+        height: 100vh;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 3;
+
+        img {
+            position: absolute;
+            display: block;
+            height: 80vw;
+            max-height: 550px;
+            max-width: 320px;
+            width: auto;
+            top: 50%; left: 50%;
+            z-index: 3;
+            filter: drop-shadow(0rem 1rem 2rem $primaryColor);
+            transform: translate( -50%, -50% );
+          } // Slider Main Images
+
+    } // Slider Main Elements
+
+    .front__element {
+        position: absolute;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 4;
+
+        span {
+            position: relative;
+            display: block;
+            top: 50%; left: 50%;
+            filter: drop-shadow(0rem .7rem 1.3rem $primaryColor);
+            transform: translate( -50%, -50% );
+            width: 100vw;
+            max-width: 700px;
+            height: 100vh;
+        } // Span for Front Images
+
+        @each $oilName, $i in $oilNames {
+            .#{$oilName}Front {
+                @include backImage($image: '../../images/8_Ingrediants/#{$oilName}_ing_front.png', $bgSize: contain);
+            } // Oil Front Image Background
+        } // Each for Oil Foreground
+
+    } //Slider Front Elements
+      
+    .title__element {
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+
+        .title {
+            transform: rotate(-15deg) translate( -5%, -5% );
+            font-family: $font-name;
+            font-size: 15vw;
+            text-align: center;
+        } // Slider Title 
+
+    } // Slider Title Element
+
+    .more__element {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 5;
+
+        .content {
+            position: relative;
+            display: flex;
+            width: 100vw;
+            height: 70vh;
+            padding-bottom: 3vh;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+
+            .headline {
+                font-family: $font-name;
+                font-size: 10vw;
+            } // Headline
+
+            .excerpt {
+                position: absolute;
+                display: block;
+                text-align: center;
+                justify-content: center;
+                opacity: 0;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                text-shadow: 1px 1px 3px $primaryColor, 0 0 1em rgba($primaryColor, 0.623), 0 0 2em rgba($primaryColor, 0.288);
+                width: 40vw;
+                height: 50vh;
+                max-width: 475px;
+                font-family: $font-body;
+                font-size: 1.4rem;
+                line-height: 24px;
+                padding: 20% 30%;
+                // margin: 20%;
+                @include backImage($height: auto, $image: '../../images/3_TitleCard/Title_Card_PNG/DBC_Title_Card_White.png', $bgSize: contain);
+                filter: drop-shadow(0.5rem 1rem 1rem $primaryColor) drop-shadow(0 0 2rem rgba($primaryColor, 0.5));
+                z-index: 1;
+                
+                // &:before {
+                //     position: absolute;
+                //     display: flex;
+                //     content: ""; 
+                //     height: 100vh;
+                //     width: 150%;
+                //     // max-width: 600px;
+                //     top: -35vh;
+                //     left: 50%;
+                //     // -ms-transform: translateY(-50%);
+                //     // transform: translateY(-50%);
+                //     transform: translateX(-50%);
+                //     @include backImage($height: 100vh, $image: '../../images/3_TitleCard/Title_Card_PNG/DBC_Title_Card_White.png', $bgSize: contain);
+                //     filter: drop-shadow(0.5rem 1rem 1rem $primaryColor);
+                // } // Before
+
+            } // Excerpt
+
+            .link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-family: $font-header;
+                width: 180px;
+                height: 48px;
+                border-radius: 24px;
+                font-size: 16px;
+                padding-top: 0px;
+                transition: all $duration ease;
+
+                .fill {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    background-size: 150% 150%;
+                    height: 48px;
+                    width: 180px;
+                    border-radius: 24px;
+                    margin: 0;
+                    // top: 7%;
+                    z-index: 5;
+                    transition: gradient $durationSlow ease;
+                    transition: $duration ease;
+                    -webkit-animation: gradient $durationSlow ease infinite;
+                    -moz-animation: gradient $durationSlow ease infinite;
+                    animation: gradient $durationSlow ease infinite;
+
+                    .modalButton {
+                        opacity: 1;
+                    } // Modale Button Text
+                } // Fill
+
+
+
+                @each $oilName, $i in $oilNames {
+                    $bgcolor: nth($i, 1);
+
+                    .#{$oilName}Fill {
+                        background-image: linear-gradient(to right, $primaryColor, $bgcolor);
+                        border: 0.1rem solid rgba($bgcolor, 0.3);
+
+                        &:hover {
+                            background-image: linear-gradient( $bgcolor, $bgcolor);
+                            filter: drop-shadow(0px 0px 70px rgba($fontColor, .5));
+                        } // Oil Fill Hover
+
+                        &.active{
+                            background-image: linear-gradient( $bgcolor, $bgcolor);
+                            position: absolute;
+                            border-radius: 0px;
+                            cursor: default;
+                            // transform: translate(0%, 80%);
+                            filter: none !important;
+
+                            .modalButton {
+                                opacity: 0;
+                            } // Modal Button text
+                        } // Oil fill Active
+                    } // Oil Fill Gradiant
+                } // Each for Oil Fill Gradiant
+
+            } // Link
+
+          } // Content
+
+      } // More Element
+      
+} // Slider List Items
+
+@include break(500px) {
+
+    .slider-list__item {
+        .more__element {
+            .content {
+                height: 77vh;
+            } // Content
+        } // More Element
+    } // Slider List Item
+
+} // Break 500
+
+@include break(560px) {
+
+    .slider {
+        .slider__nav-bar {
+            opacity: 1;
+            pointer-events: auto;
+        } // Slider Nav Bar
+    } // Slider
+
+    .slider-list__item {
+
+        .title__element {
+            display: flex;
+        } // Title Element
+
+        .more__element {
+
+            .content {
+                width: 70vw;
+                max-width: 500px;
+                transform: translate( -40%, 0% );
+                justify-content: flex-start;
+
+                .headline {
+                    font-size: 1.9rem;
+                    line-height: 46px;
+                } // Headline
+
+            } // Content
+
+        } // More Element 
+
+    } // Slider List Item
+
+} // Break 560
+
+@include break(1400px) {
+    .slider-list__item{
+        .title__element {
+            .title {
+                font-size: 13rem;
+            }
+        }
+    }
+
+} // Break 1400

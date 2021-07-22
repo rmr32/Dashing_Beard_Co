@@ -1,0 +1,166 @@
+/* ************* Navigation Style ************* */
+/* ******************************************** */
+
+/* Navigation ************* */
+
+//Styling for 'X'
+.menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    .toggler{
+        position: absolute;
+        top: 10px;
+        left: 3vw;
+        z-index: 2;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+    } //toggler
+
+    .hamburger {
+        position: absolute;
+        top: 10px;
+        left: 3vw;
+        z-index: 1;
+        width: 40px;
+        height: 50px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } //hamburger
+
+} //menu-wrap
+
+
+/*For Hamburger Lines */
+.menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: $fontColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+.menu-wrap .hamburger > div:after {
+    top: 10px;
+}
+
+/*Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+
+/*Turn Lines into an 'X' */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/*Rotate on hover when checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+}
+
+/*Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: .2s;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+/* Menu Style */
+.menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-wrap .menu > div {
+    background: var(--opacity-black);
+    background-image: url(../images/4_SilentFilm/GIF/Silent_Film_Blank.gif);
+    opacity: .95;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0,-1000px);
+    transition: all 0.1s;
+}
+
+.menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity:0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-wrap .menu > div > div > ul {
+    padding: 0;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: $fontColor;
+    font-size: 2.5rem;
+    padding: 1rem;
+
+    &:first-child {
+        padding: 0;
+    }
+
+    @include screen('(max-width: 420px)') {
+        font-size: 1.5rem;
+    } // Screen Under 420
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.logoImg{
+    width: 30vw;
+    min-width: 200px;
+    max-width: 400px;
+    margin-top: -10vh;
+}
+

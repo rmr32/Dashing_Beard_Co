@@ -1,0 +1,56 @@
+/* ************* Applying Section ************* */
+/* ******************************************** */
+
+#applying{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;  
+    text-align: center;
+
+
+    .frame{
+
+        width: 95%;
+        padding: 0px 0px 0px 0px;
+        @include backImage($image: '../../images/3_TitleCard/Title_Card_PNG/DBC_Title_Card_Mobile_White.png', $bgSize: contain);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;  
+        text-align: center;
+
+        p {
+            
+            width: 90%;
+            max-width: 350px;
+            font-size: 1rem;
+            
+            &:last-child {
+                
+                font-family: $font-name;
+                
+            } // Last Child
+
+        } // P
+
+        @include break(1000px) {
+            @include backImage($image: '../../images/3_TitleCard/Title_Card_PNG/DBC_Title_Card_White.png', $bgSize: contain);
+            width: 95vw;
+            max-width: 1100px;
+
+            p {
+                max-width: 720px;
+                font-size: 1.4rem;
+            } // p
+
+        } // Break 1000
+
+    } // Frame
+
+} // Applying

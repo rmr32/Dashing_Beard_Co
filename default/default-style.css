@@ -1,0 +1,68 @@
+/*
+COLOR PALETTE
+https://coolors.co/f7fff7-343434-2f3061-ffe66d-a1c6d7
+#F7FFF7 - almost white
+#343434 - dark gray - almost black
+#2F3061 - blue dark
+#FFE66D - yellow
+#A1C6D7 - blue light
+*/
+
+/* First letter of paragraph
+p:nth-of-type(1):first-letter{
+}
+*/
+
+/* Image Size Breakdown
+Small: 480px
+Medium: 960px
+Large: 1440px
+x-Largee: 1800px
+Original: 3600px
+/*
+
+BACKGROUND STYLES
+Gradials
+.section{
+margin-top: -40px;
+margin-right: 0px;
+margin-bottom: 0px;
+margin-left:0px;
+padding-top:50px;
+padding-bottom:50px;
+background-color: #EBE6CE;
+background-image: radial-gradient(pink 10%, transparent 15%), radial-gradient(pink 10%, transparent 15%);
+background-size: 50px 50px;
+background-position: 0 0, 25px 25px;
+}
+
+
+
+HORIZONTAL SCROLL SNAPPING
+.container {
+  scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-x: hidden;
+}
+.child {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+*/
+
+
+
+/* Global styles
+------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}

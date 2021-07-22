@@ -1,0 +1,28 @@
+/* ************* Social Bar ************* */
+/* ************************************** */
+
+/* Social Bar ************* */
+.social {
+    position: fixed;
+    width: 20vw;
+    right: 3vw;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    bottom: 4%;
+    z-index: 10;
+} // social
+
+.socialImg {
+    max-width: 30px;
+    opacity: 0.5;
+    border: 0;
+    padding: 10px;
+    transition-duration: $duration;
+
+    &:hover {
+        opacity: 1;
+        animation: flicker 300ms ease-in $durationFast infinite;
+    } //hover
+
+} // socialImg

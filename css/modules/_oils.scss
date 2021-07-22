@@ -1,0 +1,39 @@
+/* *************** Oil Section *************** */
+/* ******************************************* */
+
+.oil {
+    // display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;  
+
+        .oilFrame {
+            display: relative;
+            min-height: 50vh;
+            width: 100vw;
+
+            .bottle {
+                position: absolute;
+                width: 33%;
+                height: 20vh;
+                background-color: crimson;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                .child {
+                    background-color: black;
+                    width: 10%;
+                    height: 30%;
+                }
+
+            }
+
+            .bottle:nth-of-type(even) {
+                background-color: white;
+            }
+        }
+} //Oil

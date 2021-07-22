@@ -1,0 +1,134 @@
+/* ************* Imports ************* */
+/* *********************************** */
+
+/* ************* */
+@import "custom";
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+// @import "normalize"; //If not using Bootstrap
+@import "mixins";
+@import "base";
+
+@import "modules/backgrounds";
+@import "modules/navigation";
+
+// Change Bootstraps default value of fontsize for H2
+// .h2 {
+//     @include font-size(2rem);
+// }
+
+
+
+// SCSS Examples
+
+/*Example of @extend and & uses
+%btn (
+    padding: 0px;
+)
+
+.btn-default {
+    @extend %btn;
+    margin: 3px;
+    $:hover {
+        background: yellow;
+    }
+}
+*/
+
+/*Example of & uses with Parent selectors
+.head {
+    margin: 0px;
+    #specificID & {
+        color:red;
+    }
+}
+*/
+
+/*Example of If statement with a mixin
+@mixin break($args...){
+    @if length($args) == 1 {
+        @media (min-width: nth($args, 1)) {
+            @content;
+        }
+    }
+    @if length($args) == 2 {
+        @media (min-width: nth($args, 1))
+        and (max-width: nth($args, 2)) {
+            @content;
+        }
+    }
+}
+*/
+
+
+// // Use by saying:
+// //@include screen('tablet') {
+// //  width: 90%;
+// //}
+// @mixin screen($size) {
+//     $desktop: "(min-width: 1024px)";
+//     $tablet: "(min-width: 768px) and (max-width: 1023px)";
+//     $mobile: "(min-width: 451px) and (max-width: 767px)";
+//     $narrowmobile: "(min-width: 351px) and (max-width: 450px)";
+//     $whybother: "(max-width: 350px)";
+    
+//     @if $size == desktop {
+//         @media only screen and #{$desktop} {
+//             @content;
+//         }
+//     } //desktop
+//     @else if $size == tablet {
+//         @media only screen and #{$tablet} {
+//             @content;
+//         }
+//     } // tablet
+//     @else if $size == mobile {
+//         @media only screen and #{$mobile} {
+//             @content;
+//         }
+//     } //mobile
+//     @else if $size == narrowmobile {
+//         @media only screen and #{$narrowmobile} {
+//             @content;
+//         }
+//     } //narrowmobile
+//     @else if $size == whybother {
+//         @media only screen and #{$whybother} {
+//             @content;
+//         }
+//     } //whybother
+//     @else {
+//         @media only screen and #{$size} {
+//             @content;
+//         }
+//     } //other size
+// } // screen break
+
+
+/*Example of Loop statements
+$color-headlines: $blue, $purple, $red, $yellow;
+
+@for $item from 1 through length($color-headlines) {
+    h#{$item} {
+        color: nth($color-headlines, $item);
+    }
+}
+*/
+
+/*Example of map data type
+//Use with buttons
+.btn-default
+.btn-hot
+.btn-cool
+
+$color-button: (
+    default: $white,
+    hot: $red,
+    cool: $blue
+);
+
+@each $key, $value in $color-button {
+    .btn-#{$key} {
+        @extend %btn;
+        background-color: $value;
+    }
+}

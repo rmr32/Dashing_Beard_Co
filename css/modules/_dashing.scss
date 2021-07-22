@@ -1,0 +1,111 @@
+/* ************* Dashing Section ************* */
+/* ******************************************* */
+
+#dashing{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;  
+    text-align: center;
+
+    .frame{
+
+        width: 95%;
+        min-height: 600px;
+        padding: 0px 0px 0px 0px;
+        @include backImage($image: '../../images/3_TitleCard/Title_Card_PNG/DBC_Title_Card_Mobile_White.png', $height: 75%, $bgSize: contain);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;  
+        text-align: center;
+
+        p {
+            width: 90%;
+            max-width: 350px;
+            font-size: 0.8rem;
+
+            &:first-child {
+
+                padding-top: 3vh;
+
+            } //First Paragraph
+
+            &:last-child {
+                
+                font-family: $font-name;
+                
+            } // Last Paragraph
+
+        } // P
+
+        @include break(370px) {
+
+            p {
+                font-size: 0.9rem;
+            } // p
+
+        } // Break 370
+
+        @include break(420px) {
+
+            p {
+                font-size: 1rem;
+            } // p
+
+        } // Break 420
+
+        @include break(460px) {
+
+            p {
+                font-size: 1.1rem;
+            } // p
+
+        } // Break 460
+
+        @include break(550px) {
+
+            p {
+                font-size: 1.2rem;
+            } // p
+
+        } // Break 550
+
+        @include break(600px) {
+
+            p {
+                max-width: 400px;
+                font-size: 1.3rem;
+            } // p
+
+        } // Break 600
+
+        @include break(1000px) {
+            @include backImage($image: '../../images/3_TitleCard/Title_Card_PNG/DBC_Title_Card_White.png', $bgSize: contain);
+            width: 95vw;
+            max-width: 1100px;
+
+            p {
+                max-width: 720px;
+                font-size: 1.4rem;
+            } // p
+
+        } // Break 1000
+
+        @include break(1200px) {
+  
+            p {
+                max-width: 720px;
+                font-size: 1.5rem;
+            } // p
+
+        } // Break 1000
+
+    } // Frame
+
+} // Dashing

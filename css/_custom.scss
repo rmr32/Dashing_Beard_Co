@@ -1,0 +1,67 @@
+/* ************* Global Variables ************* */
+/* ****************************************** */
+
+/* Fonts ************* */
+// @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@800&display=swap'); //Gothic A1
+@import url("https://use.typekit.net/phg7mkr.css"); //Brush Script
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap'); //Goudy Bookletter 1911
+// @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap'); //Tenor Sans
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap'); // Oswald
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap'); //Raleway
+
+/* Font Styles ************* */
+//$font-header: 'Tenor Sans', sans-serif;
+$font-header: 'Oswald', sans-serif;
+//$font-header: 'Raleway', sans-serif;
+$font-body: 'Goudy Bookletter 1911', serif;
+$font-name: 'brush-script-std', sans-serif;
+
+/* Color Styles ************* */
+$primaryColor: black;
+$fontColor: white;
+$backgroundColor: rgba(0,0,0,.8);
+$gentlemanColor: #435869;
+$playboyColor: #717375;
+$aristocratColor: #68517a;
+$loggerColor: #a34037;
+$entertainerColor: #d49840;
+$outlawColor: #9b825c;
+$bohemianColor: #5b7d6a;
+
+/* Name/Color Map ************* */
+$oilNames: (
+    "gentleman": ($gentlemanColor, invert(30%) sepia(17%) saturate(852%) hue-rotate(165deg) brightness(95%) contrast(84%)),
+    "playboy": ($playboyColor,invert(46%) sepia(7%) saturate(116%) hue-rotate(169deg) brightness(94%) contrast(86%)), 
+    "aristocrat": ($aristocratColor, invert(36%) sepia(14%) saturate(1136%) hue-rotate(230deg) brightness(90%) contrast(90%)),
+    "logger": ($loggerColor, invert(33%) sepia(13%) saturate(2597%) hue-rotate(317deg) brightness(96%) contrast(99%)),
+    "entertainer": ($entertainerColor, invert(78%) sepia(16%) saturate(2139%) hue-rotate(337deg) brightness(90%) contrast(82%)),
+    "outlaw": ($outlawColor, invert(52%) sepia(29%) saturate(433%) hue-rotate(357deg) brightness(94%) contrast(94%)),
+    "bohemian": ($bohemianColor, invert(48%) sepia(26%) saturate(345%) hue-rotate(94deg) brightness(89%) contrast(89%))
+); // Name/Color Map
+
+/* Variables ************* */
+$duration: 0.5s; // Used in Social Opacity, button modal
+$durationSlow: 2.5s; //Used in Oil Button
+$durationFast: 0.2s; // Used in Nav Bar, Nav Arrows, Social Flicker
+
+/* Animation Variables ************* */
+@keyframes flicker { // Used for Social Hover
+    0% {opacity: 0.9; transform: translate(0px,0);}
+    20% {transform: translate(-1px,1px);}
+    40% {opacity: 0.8; transform: translate(1px,0);}
+    60% {transform: translate(-1px,-1px);}
+    80% {transform: translate(1px,0);}
+    100% {transform: translate(-1px,0);}
+} // Flicker
+
+@keyframes gradient { // Used for Oil Button
+    0% {
+        background-position: 1% 50%;
+    }
+    50% {
+        background-position: 99% 50%;
+    }
+    100% {
+        background-position: 1% 50%;
+    }
+} // Button Gradient

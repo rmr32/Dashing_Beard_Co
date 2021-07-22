@@ -1,0 +1,81 @@
+
+
+.oil::before {
+    content: " ";
+    display: block;
+    @include backImage($image: '../../images/10_Smoke/GIF/Smoke.gi', $opStart: 0, $r2: 67, $g2: 88, $b2: 105, $opMid: 0, $opEnd: 0);
+    //filter: sepia(3%) saturate(200%) brightness(50%) hue-rotate(110deg);
+    opacity: .03;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    z-index: -1;
+} // Oil::before (Smoke)
+
+.oil {
+
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;  
+    overflow: hidden;
+
+    .info {
+
+        padding: 1%, 8%, 0%, 8%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        order: 1;
+        width: 60%;
+        max-width: 1000px;
+        font-size: 1.2rem;
+        @include backImage($image: '../../images/3_TitleCard/Title_Card_GIF/Silent_Film_Title_Screen_Transparent_Tablet_White.gif', $height: 70%);
+        background-size: contain;
+        height: 75%;
+        
+
+        h1 {
+            font-family: $font-name;
+            font-size: 2.3rem;
+            padding-top: 2vh;
+        } // H1
+
+        .icons {
+            .icon{
+                padding: 1.5vh 0px;
+                height: 15vh;
+            }  // Icon
+        } // Icons
+
+        p {
+            width: 90%;
+            max-width: 500px;
+        } // P
+
+    } // Info
+
+    .oilPic{
+
+        order: 2;
+        width: 100vw;
+        width: 40vw;
+        margin-left: -5vw;
+
+        .bottle {
+            width: 25vw;
+            max-width: 400px;
+            padding-top: 4vh;   
+            padding-bottom: 2vh;         
+        } // Bottle
+
+    } // Oil Pic
+
+} // Oil

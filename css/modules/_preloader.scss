@@ -1,0 +1,20 @@
+/* ************* Preloader ************* */
+/* ************************************* */
+
+.loader {
+    position:fixed;
+    z-index: 99;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background: $primaryColor;
+    justify-content: center;
+    align-items: center;
+
+    &.hidden{
+        visibility: hidden;
+    } // hidden
+
+} // loader

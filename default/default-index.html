@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ***************  Fonts  **************** -->
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS if not loaded in SCSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/styles.css">
+
+  </head>
+  
+  <body>
+      
+         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+         <!-- Scroll Magic -->
+         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+         <!-- GSAP -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+         <!-- Scroll Magic Indicators -->
+         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+         <!-- Only need vanilla in Dev -->
+         <script src="js/vanilla.js"></script>
+         <!-- Custum JS -->
+          <script src="js/script.js"></script>
+  
+  </body>
+
+<!-- Alert Box Example in Bootstrap
+
+  <div class="alert alert-info alert-dismissable fade show">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+    <h4 class="alert-heading">Standard Checkups</h4>
+    <p class"mb-2"> Our standard checkups offer more</p>
+  </div>
+
+-->
+
+<!-- Dropdown Example in Bootstrap
+
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle"
+      type="button" id=="dropdownMenuButton"
+      data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false">
+      Services
+    </button>
+
+    <div class="dropdown=menu" aria-labelledby="dropdownMenuButton">
+      <div class="dropdown-header">Service Options</div>
+      <a class="dropdown-item" href="#">Grooming</a>
+      <a class="dropdown-item" href="#">Nutrition</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Other</a>
+    </div>
+  </div>
+
+-->
+
+<!-- Add/Collapse Accordion Example in Bootstrap
+
+  <button class="btn btn-primary mb-3" data-toggle="collapse" data-target="#pestcontrol" aria-expanded="Link to Pest Control">
+    Pest Control
+  </button
+  <div id="pestcontrol" class="collapse mb-3">
+    We offer the latest advances in safe pest control.
+  </div>
+
+  <div id="servicesaccordion" role="tablist" aria-multiselectable="true">
+    <div class="card">
+
+      <div class="card-header" role="tab" id="groomingheading">
+        <h5 class="mb-0">
+          <a data-toggle="collapse" data-parent="#servicesaccordion" 
+            href="#grooming" aria-expanded="true" aria-controls="grooming">Grooming</a></h5>
+      </div>
+
+      <div id="grooming" class="collapse show" role="tabpanel" aria-labelledby="groomingheading">
+        <div class="card-block">
+          <p>Our therapeutic grooming treatments are the best.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+-->
+
+<!-- Tooltip Example in Bootstrap
+
+  <section class="content" id="mission">
+    <h1>Our commitment to you</hi>
+    <p>Wisdom Pet Medicine strives to blend the best
+      <a href="#" data-toggle="tooltip" data-placement="top"
+      title="Exams, ultrasounds and more.">medicine</a>
+      in the world</p>
+  </section>
+
+  <script>
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    })
+  </script>
+
+-->
+
+<!-- Popover Example in Bootstrap
+
+  <button type="button" class="btn btn-info"
+    data-toggle="popover"
+    data-placement="top"
+    title="Standard Checkups"
+    data-content="Our standard checkups offer Ultrasound and X-rays."
+    Button Text
+  </button>
+
+  <script>
+    $(function() {
+      $('[data-toggle="popover"]').popover();
+    })
+  </script>
+
+-->
+
+<!-- Modal Example in Bootstrap
+  
+  <button type="button" class="btn btn-primary mt-4"
+    data-toggle="modal" data-target="#servicemodal">More Info</button>
+
+  <div class="modal fade" id="servicemodal">
+    Pest Control
+    <p>We offer the latest advances in pest control.</p>
+  </div>
+
+
+  <a class-"mt-4" data-toggle="modal" href="#servicemodal">More Info</a>
+
+  <div class="modal fade" id="servicemodal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Pest Control</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>We offer the latest advances in pest control.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+-->
+
+<!-- Carousel Example in Bootstrap
+
+  <div class="carousel slide carousel-fade" id="featured" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#featured" data-slide-to="0" class="active"></li>
+      <li data-target="#featured" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="#" alt="Text">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="#" alt="Text">
+        <div class="carousel-caption d-none d-md-block">
+          <p>Image Text for Image</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#featured" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true">
+        <span class="sr-only">Previous</span>
+      </span>
+    </a>
+     <a class="carousel-control-next" href="#featured" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true">
+        <span class="sr-only">Next</span>
+      </span>
+    </a>
+  </div>
+
+-->
+
+<!-- Scrollspy Example in Bootstrap (Needs full version of JQuery)
+
+<body data-spy="scroll" data-target="#navbar-site" data-offset="80">
+
+  <nav id="navbar-site" class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+    <div class="container">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#mission">Mission</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#staff">Staff</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="content" id="mission" style="margin-top: 80px;">
+      <h2>Our Mission</h2>
+      <p>Our Text about our mission</p>
+    </div>
+    <div class="content" id="services">
+      <h2>Our Services</h2>
+      <p>Our Text about our services</p>
+    </div>
+    <div class="content" id="staff">
+      <h2>Our Staff</h2>
+      <p>Our Text about our staff</p>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+  <script>
+    $(function() {
+    var topoffset = 70; //variable for menu height
+
+    //Use smooth scrolling when clicking on navigation
+    $('.navbar-nav a').click(function() {
+      if (location.pathname.replace(/^\//,'') === 
+      this.pathname.replace(/^\//,'') && 
+      location.hostname === this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top-topoffset
+        }, 500);
+        return false;
+       } //target.length
+      } //click function
+      }); //smooth scrolling
+
+      });
+
+    </script>
+
+</body>
+
+-->
+
+<!-- Embed Examble in Bootstrap
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="#"></iframe>
+</div>
+
+-->
+
+
+ <!-- Navbar Element-->
+            <!-- <section class="headerbar">
+                <nav id="nav">
+                    <div class="navbar">
+                        <ul>
+                            <li><a class="icon info" href="#dashinginfo">
+                                <span>The Dashing</span></a> -->
+                           <!-- </li> --> <!-- Dashing Info -->
+                            <!-- <li><a class="icon oils" href="#dashingoils">
+                                <span>The Oils</span></a> -->
+                            <!-- </li>--> <!-- Dashing Oils -->
+                            <!-- <li><a class="icon applying" href="#dashingapplying">
+                                <span>The Applying</span></a> -->
+                            <!-- </li>--> <!-- Dashing Applying -->
+                        <!-- </ul> -->
+                  <!-- </div> --> <!-- navbar -->
+                <!--</nav>--> <!-- nav -->
+            <!--</section>--> <!-- Header bar -->
+
+            <!-- console.clear();
+let targets = gsap.utils.toArray(".box");
+
+targets.forEach((obj) => {
+  obj.anim = gsap.to(obj, { height: 200 }).reversed(true);
+  obj.addEventListener("click", doCoolStuff);
+});
+
+function doCoolStuff() {
+  this.anim.reversed(!this.anim.reversed());
+} -->
