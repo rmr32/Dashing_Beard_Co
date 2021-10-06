@@ -8,11 +8,13 @@ html {
     overflow-x: hidden; /* Hide horizontal scrollbar */
 } // HTML
 
+/* Highlighted/Selected Text ************* */
 ::selection{
     color: black;
     background-color: white;
     text-shadow: none;
 }
+
 /* Embedded Documents inherit box sizing ************* */
 *, *:before, *:after {
     box-sizing: inherit;
@@ -38,7 +40,6 @@ header {
     height: 100vh;
     width: 100vw;
     opacity: 1;
-    // scroll-snap-align: start;
 }
 
 /* Spacer Body ************* */

@@ -451,12 +451,12 @@ html {
   /* Hide horizontal scrollbar */
 }
 
+/* Highlighted/Selected Text ************* */
 ::-moz-selection {
   color: black;
   background-color: white;
   text-shadow: none;
 }
-
 ::selection {
   color: black;
   background-color: white;
